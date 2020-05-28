@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bac.css">
+</head>
+<body onload="aff_c();">
+    <form action="">
+        <label for="rouge">ROUGE : </label><input type="range" min="0" max="255" step="5" name="rouge">
+        <label for="vert">VERT : </label><input type="range" min="0" max="255" step="5" name="vert">
+        <label for="bleu">BLEU : </label><input type="range" min="0" max="255" step="5" name="bleu">
+        <h3>Code générée : </h3>
+        <form action="">
+            <label for="rouge" class="cible">ROUGE : </label><input type="text" name="rouge">
+            <label for="vert" class="cible">VERT : </label><input type="text" name="vert">
+            <label for="bleu" class="cible">BLEU : </label><input type="text" name="bleu">
+                    
+        <h3>Aperçue : </h3>
+        <div></div>
+        </form>
+
+    </form>
+
+
+    <script>
+        document.querySelectorAll('input')[0].onchange = aff_c;
+        document.querySelectorAll('input')[1].onchange = aff_c;
+        document.querySelectorAll('input')[2].onchange = aff_c;
+
+        function aff_c() {
+            var red = document.querySelectorAll('input')[0].value;
+            var green = document.querySelectorAll('input')[1].value;
+            var blue = document.querySelectorAll('input')[2].value;
+            var final = 'rgb(' + red + ',' + green + ',' + blue + ')';
+            document.querySelector('div').style.background = final;
+            document.querySelectorAll('input')[3].value = red;
+            document.querySelectorAll('input')[4].value = green;
+            document.querySelectorAll('input')[5].value = blue;
+        }
+        aff_c();
+
+    </script>
+</body>
+</html>

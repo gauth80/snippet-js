@@ -1,0 +1,61 @@
+
+
+/*CSS fixe*/
+*{transition:all 2s;}
+button {margin: 50px;border-radius:12.5px;padding:10px 15px;}
+section,article,p {margin:10px;text-align: left;text-indent: 15px;}
+h3{border-bottom:1px solid gray;margin: 0;padding: 10px;}
+section{width:600px;}
+h3,p,button{font-size:calc(100% + .5rem)}
+
+
+        /*les changements*/
+        /*le button*/
+        .btn {
+            background-color: #333;
+            color: silver;}
+        .btnNuit {
+        background-color: silver;
+        color: #333;}
+
+
+        body {
+            background-color: whitesmoke;}
+        .bodyNuit {
+            background: #333;}
+
+        .wrapSection {
+            background: whitesmoke;}
+        .wrapSectionNuit {
+            background: #333;}
+
+
+        .wrapArticle {
+            border: 1px #333 dashed;
+            background: white;}
+        .wrapArticleNuit {
+            border: 1px whitesmoke dashed;
+            background: #333;}
+
+        .titre {
+            color: #333;
+            background: whitesmoke;}
+        .titreNuit {
+            color: silver;
+            background: #333;}
+
+        
+        .para {
+            color:#333;}
+        .paraNuit {
+            color: silver;}
+        div {
+            display: none;
+        }
+        .divNuit{display: flex;
+            position: absolute;
+            right: 0;
+            width: 400px;
+            top: 20%;
+            transition-duration: 5s;
+            transition-property: all;}
